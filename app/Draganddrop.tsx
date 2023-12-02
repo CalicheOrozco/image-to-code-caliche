@@ -14,7 +14,7 @@ export const DragAndDrop = ({ transformImageToCode }: { transformImageToCode: (f
 			header={false}
 			footer={false}
 			maxFiles={1}
-			label="Arrastra aquí tu captura de pantalla"
+			label="drag and drop your image here!"
 			accept="image/*"
 			onChange={updateFiles}
 		/>
