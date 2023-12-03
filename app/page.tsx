@@ -79,8 +79,8 @@ export default function Home() {
 	}
 
 	return (
-		<div className="grid grid-cols-[400px_1fr]">
-			<aside className="flex flex-col justify-between min-h-screen p-4 bg-gray-900 text-white">
+		<div className="grid grid-cols-1 md:grid-cols-[400px_1fr]">
+			<aside className="flex flex-col justify-between md:min-h-screen p-4 bg-gray-900 text-white">
 				<header className="text-center">
 					<h1 className="text-3xl font-semibold">Image to Code</h1>
 					<h2 className="text-sm opacity-75">Convert your image to code in seconds!</h2>
@@ -106,7 +106,7 @@ export default function Home() {
 						<div role="status">
 							<svg
 								aria-hidden="true"
-								className="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
+								className="w-20 h-20 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
 								viewBox="0 0 100 101"
 								fill="none"
 								xmlns="http://www.w3.org/2000/svg"
@@ -141,12 +141,18 @@ export default function Home() {
 							</div>
 							<button
 								onClick={() => copyToClipboard(html)}
-								className="p-2 rounded bg-blue-500 hover:bg-blue-700 text-white"
+								className="p-2 rounded bg-green-500 hover:bg-green-700 text-white"
 							>
 								<div className="flex justify-center items-center gap-x-3">
 									<FiCopy size={20} />
 									copy to clipboard!
 								</div>
+							</button>
+							<button
+								onClick={() => setStep(STEPS.INITIAL)}
+								className="p-2 rounded bg-indigo-500 hover:bg-indigo-700 text-white"
+							>
+								Update other image
 							</button>
 							<pre>
 								<code>{html}</code>
