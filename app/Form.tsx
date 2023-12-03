@@ -15,9 +15,9 @@ export const Form = ({ transformUrlToCode }: { transformUrlToCode: (url: string)
 				transformUrlToCode(url.value)
 			}}
 		>
-			<Label htmlFor="url">Introduce la URL de tu imagen</Label>
+			<Label htmlFor="url">Introduce the URL of your image</Label>
 			<Input name="url" id="url" type="url" placeholder="https://your-screenshot/image.jpg" />
-			<Button>Generar codigo de la imagen</Button>
+			<Button>Generate code from the image</Button>
 		</form>
 	)
 }
